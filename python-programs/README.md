@@ -17,20 +17,6 @@ Each script focuses on a specific programming concept and is written in a clear,
 ## AI Collaboration
 Some code segments were drafted or refined with AI assistance.  
 I used AI as a learning tool to understand structure, logic, and best practices, but all programs were tested and finalized by me.
-
-## Running the Programs
-Make sure Python 3 is installed, then run any script
-
-Today
-what should I write for my electronic readme file for a list of python programs codes I have written some with ai assistance
-You want a README that feels clean, professional, and honest about your work — including the fact that some code was written with AI assistance. Here’s the short answer first:
-
-Write a README that explains what the programs do, how to run them, what skills they demonstrate, and a brief note that some portions were created with AI assistance.
-
-Now let’s build something you can copy, paste, and customize. I’ll give you three complete template options with different tones so you can pick the one that fits your style.
-
-📘 Option 1: Simple & Professional (Beginner‑Friendly)
-Code
 # Python Programs Collection
 
 This repository contains a collection of Python programs I wrote while learning programming.  

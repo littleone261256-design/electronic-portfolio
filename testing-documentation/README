@@ -1,0 +1,53 @@
+Each program in this portfolio was tested using a combination of valid inputs, invalid inputs, and edge cases to ensure correct behavior and error handling. Below are sample test cases demonstrating how the programs were verified.
+
+Input Final Analyst Program:
+| Test Case | Input | Expected Output | Actual Output | Notes |
+| --- | --- | --- | --- | --- |
+| Valid input | Numeric values | Correct final analysis summary | Correct | No issues |
+| Invalid input | Letters or symbols | Error message or reprompt | Reprompt displayed | Input validation works |
+| Edge case | Very large numbers | Proper handling without crash | Correct | Stable under large values |
+
+Shapes Program
+Test Case	Input	Expected Output	Actual Output	Notes
+Valid shape choice	Square, triangle, etc.	Correct shape printed	Correct	Output matches assignment
+Invalid shape	Unknown shape name	Error message	Error displayed	Works as expected
+Edge case	Empty input	Reprompt	Reprompt	Good validation
+
+Tank AI Program
+Test Case	Input	Expected Output	Actual Output	Notes
+Valid command	Move, fire, stop	Correct tank behavior	Correct	Logic works
+Invalid command	Random letters	Error or ignored input	Error displayed	Good handling
+Edge case	Repeated commands	Consistent behavior	Consistent	No logic breaks
+
+Cube Calculator Program
+Test Case	Input	Expected Output	Actual Output	Notes
+Valid number	3	Cube = 27	Correct	Works
+Invalid input	Letters	Error message	Error displayed	Validation successful
+Edge case	0	Cube = 0	Correct	No issues
+
+Tank GUI Programs
+Test Case	Action	Expected Result	Actual Result	Notes
+Button click	Color change	GUI updates color	Correct	Works
+Letter input (letter-based version)	A, B, C	Correct tank action	Correct	GUI responds properly
+Invalid input	Symbols	No crash	No crash	Stable GUI behavior
+
+Personal Expense Logger
+Test Case	Input	Expected Output	Actual Output	Notes
+Valid expense	25.00	Added to total	Correct	Works
+Invalid input	Text	Error message	Error displayed	Good validation
+Edge case	Very large number	Added correctly	Correct	No overflow issues
+
+Improved Admissions Program
+Test Case	Input	Expected Output	Actual Output	Notes
+Valid GPA/test score	Admission decision	Correct decision	Correct	Logic improved
+Invalid input	Letters	Reprompt	Reprompt	Validation works
+Edge case	Boundary values	Correct decision	Correct	Good edge handling
+
+Grid Processor Program
+Test Case	Input	Expected Output	Actual Output	Notes
+Valid grid size	3×3 grid	Correct grid printed	Correct	Nested loops work
+Invalid size	Negative number	Error message	Error displayed	Good validation
+Edge case	Size = 1	Single cell grid	Correct	No issues
+
+Summary
+All programs were tested thoroughly to ensure they met assignment requirements, handled errors correctly, and produced accurate output. Any issues discovered during testing were corrected before final submission.

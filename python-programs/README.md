@@ -84,6 +84,22 @@ All final code was reviewed, tested, and modified by me to meet assignment requi
 Each program was tested using:
 
 Valid inputs
+## 🤖 AI-Assisted Development
+
+Several of the programs in this portfolio were created with partial assistance from AI tools. 
+AI was used as a learning resource to help me:
+
+- Understand how to structure Python programs
+- Explore different ways to solve logic problems
+- Improve readability and formatting of my code
+- Identify errors and learn how to fix them
+- Generate example solutions that I could study and modify
+
+Even when AI provided suggestions, I always reviewed the code myself, tested it, and made changes 
+to ensure I understood how it worked. All final versions of the programs were edited, corrected, 
+and verified by me. Using AI helped me learn faster, but the logic, testing, and final decisions 
+were my own work.
+
 
 Invalid inputs
 

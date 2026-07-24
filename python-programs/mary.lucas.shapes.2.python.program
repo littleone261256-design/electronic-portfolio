@@ -1,0 +1,136 @@
+# ------------------------------------------------------------
+# Geometry Calculator (No Classes)
+# Version: 1.0
+# Programmer: Mary(with ai assistance)
+# Date: July 18, 2026
+#
+# What this program does:
+#   Calculates perimeter, area, and volume for several shapes
+#   using simple functions and input validation.
+#
+# Shapes included:
+#   Rectangle (area, perimeter)
+#   Circle (area, circumference)
+#   Box (volume)
+#   Sphere (volume)
+#
+# Limitations:
+#   Only basic shapes included.
+#   Only numeric input allowed.
+# ------------------------------------------------------------
+
+import math
+
+# ------------------------------------------------------------
+# Input validation function
+# Ensures user enters a positive number
+# ------------------------------------------------------------
+def get_positive_number(prompt):
+    while True:
+        value = input(prompt)
+
+        # Check if numeric
+        if not value.replace('.', '', 1).isdigit():
+            print("Error: Please enter a valid number.")
+            continue
+
+        value = float(value)
+
+        # Range check
+        if value <= 0:
+            print("Error: Value must be greater than zero.")
+            continue
+
+        return value
+
+
+# ------------------------------------------------------------
+# Rectangle calculations
+# ------------------------------------------------------------
+def rectangle_calculations():
+    width = get_positive_number("Enter rectangle width: ")
+    height = get_positive_number("Enter rectangle height: ")
+
+    area = width * height
+    perimeter = 2 * (width + height)
+
+    print("\n--- Rectangle Results ---")
+    print("Area:", area)
+    print("Perimeter:", perimeter)
+    print("-------------------------\n")
+
+
+# ------------------------------------------------------------
+# Circle calculations
+# ------------------------------------------------------------
+def circle_calculations():
+    radius = get_positive_number("Enter circle radius: ")
+
+    area = math.pi * radius * radius
+    circumference = 2 * math.pi * radius
+
+    print("\n--- Circle Results ---")
+    print("Area:", area)
+    print("Circumference:", circumference)
+    print("----------------------\n")
+
+
+# ------------------------------------------------------------
+# Box calculations
+# ------------------------------------------------------------
+def box_calculations():
+    width = get_positive_number("Enter box width: ")
+    height = get_positive_number("Enter box height: ")
+    depth = get_positive_number("Enter box depth: ")
+
+    volume = width * height * depth
+
+    print("\n--- Box Results ---")
+    print("Volume:", volume)
+    print("-------------------\n")
+
+
+# ------------------------------------------------------------
+# Sphere calculations
+# ------------------------------------------------------------
+def sphere_calculations():
+    radius = get_positive_number("Enter sphere radius: ")
+
+    volume = (4/3) * math.pi * (radius ** 3)
+
+    print("\n--- Sphere Results ---")
+    print("Volume:", volume)
+    print("----------------------\n")
+
+
+# ------------------------------------------------------------
+# Main menu
+# ------------------------------------------------------------
+def main():
+    while True:
+        print("Geometry Calculator")
+        print("1. Rectangle")
+        print("2. Circle")
+        print("3. Box")
+        print("4. Sphere")
+        print("5. Quit")
+
+        choice = input("Choose an option: ")
+
+        if choice == "1":
+            rectangle_calculations()
+        elif choice == "2":
+            circle_calculations()
+        elif choice == "3":
+            box_calculations()
+        elif choice == "4":
+            sphere_calculations()
+        elif choice == "5":
+            print("Goodbye!")
+            break
+        else:
+            print("Error: Invalid menu choice.\n")
+
+
+# Run the program
+main()

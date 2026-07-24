@@ -1,0 +1,116 @@
+# Geometry Calculator using Classes and Inheritance
+# Version 1.0
+# Programmer: Shirley
+
+import math
+
+# Base class for all shapes
+class Shape:
+    def __init__(self):
+        pass
+
+    def area(self):
+        return None
+
+    def perimeter(self):
+        return None
+
+    def volume(self):
+        return None
+
+
+# -----------------------------
+# 2D SHAPES
+# -----------------------------
+
+class Rectangle(Shape):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+
+    def perimeter(self):
+        return 2 * (self.width + self.height)
+
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return math.pi * self.radius * self.radius
+
+    def perimeter(self):
+        return 2 * math.pi * self.radius
+
+
+# -----------------------------
+# 3D SHAPES (SOLIDS)
+# -----------------------------
+
+class Box(Rectangle):
+    def __init__(self, width, height, depth):
+        super().__init__(width, height)
+        self.depth = depth
+
+    def volume(self):
+        return self.width * self.height * self.depth
+
+
+class Sphere(Circle):
+    def __init__(self, radius):
+        super().__init__(radius)
+
+    def volume(self):
+        return (4/3) * math.pi * (self.radius ** 3)
+
+
+# -----------------------------
+# MAIN PROGRAM
+# -----------------------------
+
+def main():
+    print("Geometry Calculator")
+    print("1. Rectangle")
+    print("2. Circle")
+    print("3. Box")
+    print("4. Sphere")
+
+    choice = input("Choose a shape: ")
+
+    if choice == "1":
+        w = float(input("Enter width: "))
+        h = float(input("Enter height: "))
+        r = Rectangle(w, h)
+        print("Area:", r.area())
+        print("Perimeter:", r.perimeter())
+
+    elif choice == "2":
+        rad = float(input("Enter radius: "))
+        c = Circle(rad)
+        print("Area:", c.area())
+        print("Perimeter:", c.perimeter())
+
+    elif choice == "3":
+        w = float(input("Enter width: "))
+        h = float(input("Enter height: "))
+        d = float(input("Enter depth: "))
+        b = Box(w, h, d)
+        print("Area (base):", b.area())
+        print("Perimeter (base):", b.perimeter())
+        print("Volume:", b.volume())
+
+    elif choice == "4":
+        rad = float(input("Enter radius: "))
+        s = Sphere(rad)
+        print("Area (circle cross-section):", s.area())
+        print("Perimeter (circle cross-section):", s.perimeter())
+        print("Volume:", s.volume())
+
+    else:
+        print("Invalid choice.")
+
+
+main()

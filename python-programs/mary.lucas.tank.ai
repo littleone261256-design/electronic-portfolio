@@ -1,0 +1,74 @@
+import math
+
+# ---------------------------------------------------------
+# Tank class (right circular cylinder)
+# ---------------------------------------------------------
+class Tank:
+    def __init__(self, height, radius):
+        self.height = height
+        self.radius = radius
+
+    # Volume in cubic feet
+    def volume_cubic_feet(self):
+        return math.pi * (self.radius ** 2) * self.height
+
+    # Volume in gallons (1 cubic foot = 7.48052 gallons)
+    def volume_gallons(self):
+        return self.volume_cubic_feet() * 7.48052
+
+    # Weight of water (1 gallon = 8.34 pounds)
+    def water_weight_pounds(self):
+        return self.volume_gallons() * 8.34
+
+    # Surface area of top (circle)
+    def top_area(self):
+        return math.pi * (self.radius ** 2)
+
+    # Surface area of outside (side of cylinder)
+    def outside_area(self):
+        return 2 * math.pi * self.radius * self.height
+
+    # Total paint area
+    def total_paint_area(self):
+        return self.top_area() + self.outside_area()
+
+
+# ---------------------------------------------------------
+# Input validation function
+# ---------------------------------------------------------
+def get_positive_number(prompt):
+    while True:
+        try:
+            value = float(input(prompt))
+            if value <= 0:
+                print("Error: Value must be greater than zero.")
+            else:
+                return value
+        except ValueError:
+            print("Error: Please enter a valid number.")
+
+
+# ---------------------------------------------------------
+# Main program
+# ---------------------------------------------------------
+def main():
+    print("Tank Volume and Surface Area Calculator")
+    print("---------------------------------------")
+
+    height = get_positive_number("Enter tank height in feet: ")
+    radius = get_positive_number("Enter tank radius in feet: ")
+
+    tank = Tank(height, radius)
+
+    print("\nResults:")
+    print("---------------------------------------")
+    print(f"Total Volume (cubic feet): {tank.volume_cubic_feet():.2f}")
+    print(f"Total Volume (gallons): {tank.volume_gallons():.2f}")
+    print(f"Total Weight of Water (pounds): {tank.water_weight_pounds():.2f}")
+    print(f"Top Surface Area (sq ft): {tank.top_area():.2f}")
+    print(f"Outside Surface Area (sq ft): {tank.outside_area():.2f}")
+    print(f"Total Paint Area (sq ft): {tank.total_paint_area():.2f}")
+
+
+# Run the program
+main()

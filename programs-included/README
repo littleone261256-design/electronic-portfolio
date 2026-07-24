@@ -8,3 +8,23 @@
 - Personal Expense Logger
 - Improved Admissions Program
 - Grid Processor Program
+📘 Programs Included
+This portfolio contains the following Python programs developed for CIT‑144:
+
+Input Final Analyst Program – Processes user input and generates a final analysis summary.
+
+Shapes Program – Creates shapes using loops and conditional logic.
+
+Tank AI Program – Simulates tank behavior using decision structures.
+
+Cube Calculator Program – Calculates cube values with input validation and looping.
+
+Tank GUI (Color Change Version) – GUI version of the tank program with color‑change functionality.
+
+Tank GUI (Letter‑Based Version) – GUI version using letters instead of numbers for controls.
+
+Personal Expense Logger – Records expenses and calculates running totals.
+
+Improved Admissions Program – Enhanced admissions decision program with clearer prompts and logic.
+
+Grid Processor Program – Generates a formatted grid using nested loops.
